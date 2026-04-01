@@ -1,0 +1,121 @@
+<UserControl x:Class="Ty.Ck.Desktop.Views.Pages.InspectionTasksPageView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1.45*" />
+                <ColumnDefinition Width="0.95*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0" Margin="0,0,16,0">
+                <Border Style="{StaticResource CardBorderStyle}">
+                    <StackPanel>
+                        <TextBlock Text="任务批次" Style="{StaticResource SectionTitleTextStyle}" />
+                        <Grid Margin="0,18,0,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0"
+                                    Padding="16"
+                                    Background="{StaticResource SurfaceAltBrush}"
+                                    CornerRadius="16"
+                                    Margin="0,0,10,0">
+                                <StackPanel>
+                                    <TextBlock Text="早班" Style="{StaticResource OverlineTextStyle}" />
+                                    <TextBlock Margin="0,8,0,0" Text="09:00" FontSize="22" FontWeight="SemiBold" />
+                                    <TextBlock Margin="0,6,0,0" Text="待执行" Style="{StaticResource SecondaryTextStyle}" />
+                                </StackPanel>
+                            </Border>
+                            <Border Grid.Column="1"
+                                    Padding="16"
+                                    Background="{StaticResource SurfaceAltBrush}"
+                                    CornerRadius="16"
+                                    Margin="0,0,10,0">
+                                <StackPanel>
+                                    <TextBlock Text="午班" Style="{StaticResource OverlineTextStyle}" />
+                                    <TextBlock Margin="0,8,0,0" Text="14:00" FontSize="22" FontWeight="SemiBold" />
+                                    <TextBlock Margin="0,6,0,0" Text="待执行" Style="{StaticResource SecondaryTextStyle}" />
+                                </StackPanel>
+                            </Border>
+                            <Border Grid.Column="2"
+                                    Padding="16"
+                                    Background="{StaticResource SurfaceAltBrush}"
+                                    CornerRadius="16">
+                                <StackPanel>
+                                    <TextBlock Text="晚班" Style="{StaticResource OverlineTextStyle}" />
+                                    <TextBlock Margin="0,8,0,0" Text="19:00" FontSize="22" FontWeight="SemiBold" />
+                                    <TextBlock Margin="0,6,0,0" Text="待执行" Style="{StaticResource SecondaryTextStyle}" />
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource CardBorderStyle}" Margin="0,16,0,0">
+                    <StackPanel>
+                        <TextBlock Text="执行队列" Style="{StaticResource SectionTitleTextStyle}" />
+                        <Border Margin="0,18,0,0" Padding="16" Background="{StaticResource SurfaceAltBrush}" CornerRadius="16">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="一号园区白天巡检" />
+                                <TextBlock Grid.Column="1" Text="42 点位" />
+                                <TextBlock Grid.Column="2" Text="待开始" Style="{StaticResource SecondaryTextStyle}" />
+                            </Grid>
+                        </Border>
+                        <Border Margin="0,12,0,0" Padding="16" Background="{StaticResource SurfaceAltBrush}" CornerRadius="16">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="厂区围界巡检" />
+                                <TextBlock Grid.Column="1" Text="28 点位" />
+                                <TextBlock Grid.Column="2" Text="排队中" Style="{StaticResource SecondaryTextStyle}" />
+                            </Grid>
+                        </Border>
+                        <Border Margin="0,12,0,0" Padding="16" Background="{StaticResource SurfaceAltBrush}" CornerRadius="16">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*" />
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="夜间抽检批次" />
+                                <TextBlock Grid.Column="1" Text="16 点位" />
+                                <TextBlock Grid.Column="2" Text="待排班" Style="{StaticResource SecondaryTextStyle}" />
+                            </Grid>
+                        </Border>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <Border Style="{StaticResource CardBorderStyle}">
+                    <StackPanel>
+                        <TextBlock Text="本轮范围" Style="{StaticResource SectionTitleTextStyle}" />
+                        <TextBlock Margin="0,18,0,0" Text="自定义目录占位" Style="{StaticResource OverlineTextStyle}" />
+                        <TextBlock Margin="0,8,0,0" Text="厂区北门" />
+                        <TextBlock Margin="0,8,0,0" Text="厂区南门" />
+                        <TextBlock Margin="0,8,0,0" Text="办公楼外围" />
+                    </StackPanel>
+                </Border>
+
+                <Border Style="{StaticResource CardBorderStyle}" Margin="0,16,0,0">
+                    <StackPanel>
+                        <TextBlock Text="任务面板" Style="{StaticResource SectionTitleTextStyle}" />
+                        <TextBlock Margin="0,18,0,0" Text="启动巡检、进度、结果统计留待后续轮次接入" TextWrapping="Wrap" Style="{StaticResource SecondaryTextStyle}" />
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

@@ -1,0 +1,36 @@
+<Application x:Class="Ty.Ck.Desktop.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:viewModels="clr-namespace:Ty.Ck.Desktop.ViewModels.Pages"
+             xmlns:views="clr-namespace:Ty.Ck.Desktop.Views.Pages"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Themes/FluentTheme.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModels:HomePageViewModel}">
+                <views:HomePageView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:InspectionTasksPageViewModel}">
+                <views:InspectionTasksPageView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:DeviceLedgerPageViewModel}">
+                <views:DeviceLedgerPageView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:OverviewPageViewModel}">
+                <views:OverviewPageView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:ReviewPageViewModel}">
+                <views:ReviewPageView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:NotificationRecordsPageViewModel}">
+                <views:NotificationRecordsPageView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModels:SettingsPageViewModel}">
+                <views:SettingsPageView />
+            </DataTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

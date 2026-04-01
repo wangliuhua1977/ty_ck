@@ -1,0 +1,26 @@
+﻿# Visual Studio / .NET
+.vs/
+bin/
+obj/
+**/bin/
+**/obj/
+
+# User-specific
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+*.tlog
+
+# Test / coverage
+TestResults/
+*.trx
+coverage*.json
+coverage*.xml
+
+# Local artifacts
+artifacts/
